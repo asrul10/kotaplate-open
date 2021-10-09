@@ -1,7 +1,7 @@
 ![Kotaplate Logo](https://github.com/asrul10/kotaplate-open/blob/main/src/assets/images/kotaplate-full-logo.png?raw=true)
 
 ## Kotaplate
-Web app template based on [Create React App](https://github.com/facebook/create-react-app) and [Bootstrap 5](https://github.com/twbs/bootstrap)
+Kotaplate is web app template based on [Create React App](https://github.com/facebook/create-react-app) and [Bootstrap 5](https://github.com/twbs/bootstrap)
 
 ## Usage
 - Install [pnpm](https://pnpm.io/installation)
@@ -16,4 +16,7 @@ Runs the app in the development mode. Open [http://localhost:3000](http://localh
 - [ ] Any components (auto complete, mentions, data grid, ...)
 
 ## Contributing
-- Welcome 🥂
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+
+## License
+[MIT](https://choosealicense.com/licenses/mit/)
