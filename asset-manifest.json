@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/kotaplate-open/static/css/main.3eed94c5.chunk.css",
-    "main.js": "/kotaplate-open/static/js/main.eeadd987.chunk.js",
-    "main.js.map": "/kotaplate-open/static/js/main.eeadd987.chunk.js.map",
+    "main.css": "/kotaplate-open/static/css/main.386d4fcf.chunk.css",
+    "main.js": "/kotaplate-open/static/js/main.090abdf8.chunk.js",
+    "main.js.map": "/kotaplate-open/static/js/main.090abdf8.chunk.js.map",
     "runtime-main.js": "/kotaplate-open/static/js/runtime-main.7a0668fb.js",
     "runtime-main.js.map": "/kotaplate-open/static/js/runtime-main.7a0668fb.js.map",
-    "static/js/2.804af51f.chunk.js": "/kotaplate-open/static/js/2.804af51f.chunk.js",
-    "static/js/2.804af51f.chunk.js.map": "/kotaplate-open/static/js/2.804af51f.chunk.js.map",
+    "static/js/2.b29515ec.chunk.js": "/kotaplate-open/static/js/2.b29515ec.chunk.js",
+    "static/js/2.b29515ec.chunk.js.map": "/kotaplate-open/static/js/2.b29515ec.chunk.js.map",
     "static/js/3.1b735b9d.chunk.js": "/kotaplate-open/static/js/3.1b735b9d.chunk.js",
     "static/js/3.1b735b9d.chunk.js.map": "/kotaplate-open/static/js/3.1b735b9d.chunk.js.map",
     "index.html": "/kotaplate-open/index.html",
-    "static/css/main.3eed94c5.chunk.css.map": "/kotaplate-open/static/css/main.3eed94c5.chunk.css.map",
-    "static/js/2.804af51f.chunk.js.LICENSE.txt": "/kotaplate-open/static/js/2.804af51f.chunk.js.LICENSE.txt",
+    "static/css/main.386d4fcf.chunk.css.map": "/kotaplate-open/static/css/main.386d4fcf.chunk.css.map",
+    "static/js/2.b29515ec.chunk.js.LICENSE.txt": "/kotaplate-open/static/js/2.b29515ec.chunk.js.LICENSE.txt",
     "static/media/portrait.e70cd04b.png": "/kotaplate-open/static/media/portrait.e70cd04b.png"
   },
   "entrypoints": [
     "static/js/runtime-main.7a0668fb.js",
-    "static/js/2.804af51f.chunk.js",
-    "static/css/main.3eed94c5.chunk.css",
-    "static/js/main.eeadd987.chunk.js"
+    "static/js/2.b29515ec.chunk.js",
+    "static/css/main.386d4fcf.chunk.css",
+    "static/js/main.090abdf8.chunk.js"
   ]
 }
