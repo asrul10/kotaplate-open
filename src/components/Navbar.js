@@ -11,6 +11,7 @@ import {
   faEnvelope,
   faSignOutAlt,
 } from "@fortawesome/free-solid-svg-icons";
+import sidebarMenu from "../data/sidebar.json";
 
 const title = "Kotaplate";
 
@@ -102,204 +103,24 @@ const menuItems = [
   },
 ];
 
-const components = [
-  {
-    href: "/",
-    label: "Buttons",
-  },
-  {
-    href: "/",
-    label: "Button group",
-  },
-  {
-    href: "/",
-    label: "Icons",
-  },
-  {
-    href: "/",
-    label: "Typography",
-  },
-  {
-    href: "/",
-    label: "Breadcrumb",
-  },
-  {
-    href: "/",
-    label: "Dropdowns",
-  },
-  {
-    href: "/",
-    label: "Pagination",
-  },
-  {
-    href: "/",
-    label: "Steps",
-  },
-  {
-    href: "/",
-    label: "Auto Complete",
-  },
-  {
-    href: "/",
-    label: "Checkbox",
-  },
-  {
-    href: "/",
-    label: "Date Picker",
-  },
-  {
-    href: "/",
-    label: "Forms",
-  },
-  {
-    href: "/",
-    label: "Input Number",
-  },
-  {
-    href: "/",
-    label: "Input",
-  },
-  {
-    href: "/",
-    label: "Mentions",
-  },
-  {
-    href: "/",
-    label: "Radio",
-  },
-  {
-    href: "/",
-    label: "Switch",
-  },
-  {
-    href: "/",
-    label: "Slider",
-  },
-  {
-    href: "/",
-    label: "Select",
-  },
-  {
-    href: "/",
-    label: "Transfer",
-  },
-  {
-    href: "/",
-    label: "Time Picker",
-  },
-  {
-    href: "/",
-    label: "Upload",
-  },
-  {
-    href: "/",
-    label: "Badge",
-  },
-  {
-    href: "/",
-    label: "Card",
-  },
-  {
-    href: "/",
-    label: "Carousel",
-  },
-  {
-    href: "/",
-    label: "Collapse",
-  },
-  {
-    href: "/",
-    label: "Navs",
-  },
-  {
-    href: "/",
-    label: "Popovers",
-  },
-  {
-    href: "/",
-    label: "Tooltips",
-  },
-  {
-    href: "/",
-    label: "List group",
-  },
-  {
-    href: "/",
-    label: "Avatar",
-  },
-  {
-    href: "/",
-    label: "Comment",
-  },
-  {
-    href: "/",
-    label: "Calendar",
-  },
-  {
-    href: "/",
-    label: "Tree",
-  },
-  {
-    href: "/",
-    label: "Timeline",
-  },
-  {
-    href: "/",
-    label: "Tables",
-  },
-  {
-    href: "/",
-    label: "Alerts",
-  },
-  {
-    href: "/",
-    label: "Modal",
-  },
-  {
-    href: "/",
-    label: "Progress",
-  },
-  {
-    href: "/",
-    label: "Message",
-  },
-  {
-    href: "/",
-    label: "Notification",
-  },
-  {
-    href: "/",
-    label: "Skeleton",
-  },
-  {
-    href: "/",
-    label: "Jumbotron",
-  },
-  {
-    href: "/",
-    label: "Media Object",
-  },
-  {
-    href: "/",
-    label: "Scrollspy",
-  },
-  {
-    href: "/",
-    label: "Apex",
-  },
-  {
-    href: "/",
-    label: "Chartjs",
-  },
-  {
-    href: "/",
-    label: "Google Maps",
-  },
-  {
-    href: "/",
-    label: "Open Street Maps",
-  },
-];
+const filterMenu = (menus) => {
+  let newList = [];
+  for (let index = 0; index < menus.length; index++) {
+    const menu = menus[index];
+    if (menu.href) {
+      newList.push({
+        href: menu.href,
+        label: menu.label
+      });
+    }
+    if (menu.child) {
+      newList = newList.concat(filterMenu(menu.child));
+    }
+  }
+  return newList;
+};
+
+const components = filterMenu(sidebarMenu);
 
 const handleSearchBar = (e) => {
   const word = e.target.value;
