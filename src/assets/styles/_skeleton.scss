@@ -1,0 +1,61 @@
+@mixin skeletonMix() {
+  position: relative;
+  overflow: hidden;
+  background-color: $gray-200;
+  color: $gray-200;
+}
+
+.skeleton {
+  @include skeletonMix();
+}
+p.skeleton {
+  height: $font-size-base;
+  margin-bottom: 0.5rem;
+  @include skeletonMix();
+}
+h1.skeleton {
+  height: $h1-font-size;
+  @include skeletonMix();
+}
+h2.skeleton {
+  height: $h2-font-size;
+  @include skeletonMix();
+}
+h3.skeleton {
+  height: $h3-font-size + 0.25rem;
+  @include skeletonMix();
+}
+h4.skeleton {
+  height: $h4-font-size;
+  @include skeletonMix();
+}
+h5.skeleton {
+  height: $h5-font-size;
+  @include skeletonMix();
+}
+h6.skeleton {
+  height: $h6-font-size;
+  @include skeletonMix();
+}
+
+.skeleton-animated {
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, $gray-200, $gray-400, $gray-200);
+    animation: skeleton-animate-progress 1s ease-in-out infinite;
+  }
+}
+
+@keyframes skeleton-animate-progress {
+  0% {
+    transform: translate3d(-100%, 0, 0);
+  }
+  100% {
+    transform: translate3d(100%, 0, 0);
+  }
+}

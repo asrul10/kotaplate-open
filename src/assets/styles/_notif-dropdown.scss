@@ -1,0 +1,15 @@
+.header-notifications {
+  display: flex;
+  min-width: 300px;
+  justify-content: space-between;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+.time-notifications {
+  font-size: 80%;
+  opacity: 0.5;
+  line-height: 1;
+  &:focus {
+    color: $white;
+  }
+}

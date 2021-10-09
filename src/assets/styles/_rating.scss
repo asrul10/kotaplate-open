@@ -1,0 +1,78 @@
+.show-title {
+  display: flex;
+  align-items: center;
+}
+
+.rating-title {
+  margin-left: 0.3rem;
+}
+
+.rating {
+  border: none;
+  display: inline-block;
+  > {
+    [id^="star"] {
+      display: none;
+    }
+
+    label:before {
+      margin: 3px;
+      font-size: 1rem;
+      font-family: "Font Awesome 5 Free";
+      display: inline-block;
+      content: "\f005";
+    }
+
+    .half:before {
+      content: "\f089";
+      position: absolute;
+    }
+
+    label {
+      color: #ddd;
+      float: right;
+      margin: 0;
+    }
+
+    [id^="star"]:checked ~ label {
+      color: $yellow;
+    }
+  }
+
+  &.rating-md {
+    label:before {
+      margin: 5px;
+      font-size: 1.5rem;
+    }
+  }
+
+  &.rating-lg {
+    label:before {
+      margin: 5px;
+      font-size: 2rem;
+    }
+  }
+
+  &:not(:checked),
+  &:not(.rating-readonly) > label:hover {
+    color: $yellow;
+
+    ~ label {
+      color: $yellow;
+    }
+  }
+
+  &:not(.rating-readonly) > {
+    [id^="star"]:checked {
+      + label:hover,
+      ~ label:hover {
+        color: lighten($yellow, 15%);
+      }
+    }
+
+    label:hover ~ [id^="star"]:checked ~ label,
+    [id^="star"]:checked ~ label:hover ~ label {
+      color: lighten($yellow, 15%);
+    }
+  }
+}

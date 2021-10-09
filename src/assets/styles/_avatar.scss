@@ -1,0 +1,78 @@
+@mixin avatar($res: "md", $circle: "true") {
+  $avatarSize: 3rem;
+  $avatarLineHeight: 3rem;
+  $avatarFontSize: 1.75rem;
+  $avatarBorderRadius: 50%;
+
+  @if $res == "lg" {
+    $avatarSize: 4rem;
+    $avatarLineHeight: 4rem;
+    $avatarFontSize: 2rem;
+  }
+  @if $res == "sm" {
+    $avatarSize: 2.5rem;
+    $avatarLineHeight: 2.5rem;
+    $avatarFontSize: 1.125rem;
+  }
+  @if $res == "xs" {
+    $avatarSize: 1.5rem;
+    $avatarLineHeight: 1.5rem;
+    $avatarFontSize: 0.875rem;
+  }
+
+  @if $circle == "false" {
+    $avatarBorderRadius: 10%;
+  }
+
+  display: inline-block;
+  border-radius: $avatarBorderRadius;
+  width: $avatarSize;
+  height: $avatarSize;
+  font-size: $avatarFontSize;
+  line-height: $avatarLineHeight;
+  text-align: center;
+
+  background: $gray-200;
+  color: $white;
+  white-space: nowrap;
+  position: relative;
+  overflow: hidden;
+  vertical-align: middle;
+
+  img,
+  svg {
+    width: 100%;
+  }
+}
+
+.avatar-circle-xs {
+  @include avatar("xs");
+}
+
+.avatar-circle-sm {
+  @include avatar("sm");
+}
+
+.avatar-circle-md {
+  @include avatar("md");
+}
+
+.avatar-circle-lg {
+  @include avatar("lg");
+}
+
+.avatar-square-xs {
+  @include avatar("xs", "false");
+}
+
+.avatar-square-sm {
+  @include avatar("sm", "false");
+}
+
+.avatar-square-md {
+  @include avatar("md", "false");
+}
+
+.avatar-square-lg {
+  @include avatar("lg", "false");
+}

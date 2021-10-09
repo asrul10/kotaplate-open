@@ -1,0 +1,124 @@
+// Colors
+$gray-100: #f8f9fa;
+$gray-200: #e4ebef;
+$gray-300: #cfd7df;
+$gray-400: #bac3cf;
+$gray-500: #a5afbf;
+$gray-600: #919baf;
+$gray-700: #7c879f;
+$gray-800: #67738f;
+$gray-900: #525f7f;
+
+$blue: #0099e5;
+$yellow: #ffb848;
+$red: #ff6886;
+$green: #3ecf8e;
+$light: #ebe8f3;
+$purple: #8e43e8;
+$cyan: #a6dcef;
+
+$black: $gray-900;
+$color-contrast-dark: #000;
+$background: #eff2f3;
+$secondary: #6772e5;
+
+// Shadow level
+$box-shadow: 0 1px 2px 0 rgba($color-contrast-dark, 0.05);
+$box-shadow-sm: 0 1px 3px 0 rgba($color-contrast-dark, 0.1),
+  0 1px 2px 0 rgba($color-contrast-dark, 0.06);
+$box-shadow-md: 0 4px 6px -1px rgba($color-contrast-dark, 0.1),
+  0 2px 4px -1px rgba($color-contrast-dark, 0.06);
+$box-shadow-lg: 0 10px 15px -3px rgba($color-contrast-dark, 0.1),
+  0 4px 6px -2px rgba($color-contrast-dark, 0.05);
+
+$shadow-level-0: $box-shadow;
+$shadow-level-1: $box-shadow-sm;
+$shadow-level-2: $box-shadow-md;
+$shadow-level-3: $box-shadow-lg;
+$box-shadow-inset: null none;
+
+// Transitions
+$enable-transitions: false;
+$enable-shadows: true;
+
+// Fonts
+$font-family-sans-serif: "Lato", sans-serif;
+$font-size-base: 0.875rem;
+$text-muted: $gray-600;
+$headings-font-family: "Open Sans", sans-serif;
+$headings-font-weight: 600;
+
+// Components
+$border-radius: 0.3125rem;
+
+// Alerts
+$alert-padding-y: 0.5rem;
+$alert-padding-x: 0.875rem;
+$alert-margin-bottom: 1rem;
+$alert-border-width: 0;
+$alert-bg-level: -7.5;
+$alert-color-level: 9;
+$alert-border-level: -5.6;
+
+// Close
+$close-text-shadow: none;
+
+// Badges
+$badge-padding-y: 0.38em;
+$badge-padding-x: 0.8em;
+$badge-border-radius: 0.25rem;
+$badge-focus-width: 0;
+
+// Anchor
+$link-hover-decoration: none;
+$link-decoration: none;
+
+// Breadcrumbs
+$breadcrumb-bg: transparent;
+$breadcrumb-divider: quote("");
+$breadcrumb-item-padding: 0;
+
+// Buttons
+$input-btn-font-family: $headings-font-family;
+$btn-box-shadow: $shadow-level-0;
+$btn-focus-box-shadow: none;
+$btn-active-box-shadow: none;
+$input-btn-focus-width: 0;
+
+// Sidebar
+$sidebar-width: 240px;
+
+// Navbar
+$navbar-height: 3.75rem;
+$shadow-navbar: inset 0 0.25rem 0.125rem -0.125rem rgba($color-contrast-dark, 0.2);
+$navbar-brand-padding-y: 0;
+$navbar-brand-font-size: $font-size-base;
+
+// Sidepage
+$sidepage-width: 360px;
+
+// Border
+$border-color: #e9ecef;
+
+// Tooltips
+$tooltip-arrow-color: transparent;
+
+// Dropdowns
+$dropdown-min-width: 0;
+$dropdown-box-shadow: $shadow-level-2;
+$dropdown-link-hover-bg: $gray-200;
+$dropdown-link-active-color: $black;
+$dropdown-link-active-bg: $gray-200;
+
+// Forms
+$input-focus-border-color: $black;
+$input-font-family: $font-family-sans-serif;
+$input-border-color: $gray-400;
+
+// Fontawesome
+$fa-font-path: "../fonts";
+
+$custom-control-gutter: 1rem;
+
+// Checkbox
+$form-check-input-border: 1px solid $input-border-color;

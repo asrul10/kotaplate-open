@@ -1,0 +1,32 @@
+.slider-with-icon {
+  display: flex;
+  .first-icon {
+    margin-right: 0.875rem;
+  }
+  .second-icon {
+    margin-left: 0.875rem;
+  }
+  .first-icon.active,
+  .second-icon.active {
+    color: $primary;
+  }
+}
+
+.slider-with-tooltip {
+  position: relative;
+
+  .slider-tooltip {
+    background: $black;
+    color: white;
+    padding: 4px 12px;
+    position: absolute;
+    border-radius: 4px;
+    left: 50%;
+    top: 20px;
+    transform: translateX(-50%);
+  }
+
+  &.tooltip-on-focus .slider-tooltip {
+    display: none;
+  }
+}

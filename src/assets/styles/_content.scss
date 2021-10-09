@@ -1,0 +1,14 @@
+.content-wrapper {
+  max-height: calc(100vh - #{$navbar-height} - 1px);
+  padding-left: 1rem;
+  padding-right: 1.5rem;
+  padding-top: 1.5rem;
+  padding-bottom: 1rem;
+  overflow: hidden;
+  position: relative;
+  height: auto;
+  width: 100%;
+  .main-content {
+    position: relative;
+  }
+}

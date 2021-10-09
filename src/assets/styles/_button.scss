@@ -1,0 +1,103 @@
+.btn {
+  font-weight: 600;
+  font-size: $font-size-base;
+
+  .btn-check:checked + &,
+  .btn-check:active + &,
+  &:active,
+  &.active,
+  .show > &.dropdown-toggle {
+    &:focus {
+      box-shadow: $btn-box-shadow;
+    }
+  }
+
+  &.btn-anchor {
+    font-family: $font-family-sans-serif;
+    font-weight: $font-weight-bold;
+    box-shadow: none !important;
+    border-width: 0;
+    color: $link-color;
+    &:hover {
+      color: $link-hover-color;
+      text-decoration: $link-hover-decoration;
+    }
+  }
+}
+
+@each $color, $value in $theme-colors {
+  $darkenHover: darken($value, 8%);
+  .btn-#{$color} {
+    @include button-variant(
+      $value,
+      $value,
+      $white,
+      $darkenHover,
+      $darkenHover,
+      $white,
+      $darkenHover,
+      $darkenHover,
+      $white
+    );
+
+    &.disabled,
+    &:disabled {
+      color: $white;
+    }
+
+    .btn-check:checked + &,
+    .btn-check:active + &,
+    &:active,
+    &.active,
+    .show > &.dropdown-toggle {
+      &:focus {
+        box-shadow: $btn-box-shadow;
+      }
+    }
+  }
+
+  .btn-outline-#{$color} {
+    @include button-outline-variant($value, $white);
+
+    .btn-check:checked + &,
+    .btn-check:active + &,
+    &:active,
+    &.active,
+    &.dropdown-toggle.show {
+      color: $white;
+    }
+
+    .btn-check:checked + &,
+    .btn-check:active + &,
+    &:active,
+    &.active,
+    .show > &.dropdown-toggle {
+      &:focus {
+        box-shadow: $btn-box-shadow;
+      }
+    }
+  }
+}
+
+.btn-light {
+  color: $black;
+  &:hover {
+    color: $black;
+  }
+
+  &:focus,
+  &.focus {
+    color: $black;
+  }
+
+  &.disabled,
+  &:disabled {
+    color: $black;
+  }
+
+  &:not(:disabled):not(.disabled):active,
+  &:not(:disabled):not(.disabled).active,
+  .show > &.dropdown-toggle {
+    color: $black;
+  }
+}

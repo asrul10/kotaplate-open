@@ -1,0 +1,18 @@
+.alert-notify-custom {
+  background-color: $white;
+  box-shadow: $shadow-level-3;
+  margin-bottom: 16px;
+  border-radius: $border-radius;
+  transition: none !important;
+
+  .notify-massage {
+    color: $black;
+    font-size: $font-size-base;
+  }
+
+  .notify-title {
+    margin-bottom: 8px;
+    color: $black; // change title color
+    font-size: $h4-font-size;
+  }
+}

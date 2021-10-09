@@ -1,0 +1,328 @@
+.datepicker {
+  border-radius: $border-radius;
+  &-inline {
+    width: 220px;
+  }
+
+  direction: ltr;
+  &-rtl {
+    direction: rtl;
+    &.dropdown-menu {
+      left: auto;
+    }
+    table tr td span {
+      float: right;
+    }
+  }
+
+  &-dropdown {
+    top: 0;
+    left: 0;
+    padding: 4px;
+    &.datepicker-orient-left:before {
+      left: 6px;
+    }
+    &.datepicker-orient-left:after {
+      left: 7px;
+    }
+    &.datepicker-orient-right:before {
+      right: 6px;
+    }
+    &.datepicker-orient-right:after {
+      right: 7px;
+    }
+    &.datepicker-orient-bottom:before {
+      top: -7px;
+    }
+    &.datepicker-orient-bottom:after {
+      top: -6px;
+    }
+    &.datepicker-orient-top:before {
+      bottom: -7px;
+      border-bottom: 0;
+      border-top: 7px solid $dropdown-border-color;
+    }
+    &.datepicker-orient-top:after {
+      bottom: -6px;
+      border-bottom: 0;
+      border-top: 6px solid $dropdown-bg;
+    }
+  }
+
+  table {
+    margin: 0;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    tr {
+      td,
+      th {
+        text-align: center;
+        width: 30px;
+        height: 30px;
+        border-radius: 4px;
+        border: none;
+      }
+    }
+  }
+  // Inline display inside a table presents some problems with
+  // border and background colors.
+  .table-striped & table tr {
+    td,
+    th {
+      background-color: transparent;
+    }
+  }
+
+  table tr td {
+    &.old,
+    &.new {
+      color: $gray-400;
+    }
+
+    &.day:hover,
+    &.focused {
+      background: $gray-200;
+      cursor: pointer;
+    }
+
+    &.disabled,
+    &.disabled:hover {
+      background: none;
+      color: $gray-400;
+      cursor: default;
+    }
+
+    &.highlighted {
+      @include button-variant($info, $info);
+      box-shadow: none;
+      border-radius: 0;
+
+      &.focused {
+        background: darken($info, 10%);
+      }
+
+      &.disabled,
+      &.disabled:active {
+        opacity: $btn-disabled-opacity;
+      }
+    }
+
+    &.today {
+      @include button-variant($yellow, $yellow);
+      box-shadow: none;
+      color: $white;
+
+      &:hover {
+        color: $white;
+      }
+
+      &.focused {
+        color: $white;
+        background: lighten($yellow, 20%);
+      }
+
+      &:focus,
+      &.focus {
+        color: $white;
+        background-color: darken($yellow, 4%);
+      }
+
+      &.disabled,
+      &:disabled {
+        color: $white;
+        background-color: lighten($yellow, 20%);
+      }
+
+      &:not(:disabled):not(.disabled):active,
+      &:not(:disabled):not(.disabled).active {
+        color: $white;
+        background-color: $yellow;
+      }
+    }
+
+    &.range {
+      @include button-variant($gray-200, $gray-200);
+      box-shadow: none;
+      border-radius: 0;
+
+      &.focused {
+        background: darken($gray-200, 10%);
+      }
+
+      &.disabled,
+      &.disabled:active {
+        opacity: $btn-disabled-opacity;
+      }
+    }
+
+    &.range.highlighted {
+      @include button-variant($info, $info);
+      box-shadow: none;
+      border-radius: 0;
+
+      &.disabled,
+      &.disabled:active {
+        opacity: $btn-disabled-opacity;
+      }
+    }
+
+    &.range.today {
+      @include button-variant($orange, $orange);
+      box-shadow: none;
+
+      &.disabled,
+      &.disabled:active {
+        background: darken($orange, 30%);
+        color: $gray-400;
+      }
+    }
+
+    &.selected,
+    &.selected.highlighted {
+      @include button-variant($gray-400, $gray-400);
+      box-shadow: none;
+    }
+
+    &.active,
+    &.active.highlighted {
+      @include button-variant($blue, $blue);
+      box-shadow: none;
+
+      &:hover {
+        color: $white;
+        background-color: darken($blue, 4%);
+      }
+
+      &:focus,
+      &.focus {
+        color: $white;
+        background-color: darken($blue, 4%);
+      }
+
+      &.disabled,
+      &:disabled {
+        color: $white;
+        background-color: darken($blue, 10%);
+      }
+
+      &:not(:disabled):not(.disabled):active,
+      &:not(:disabled):not(.disabled).active {
+        color: $white;
+        background-color: $blue;
+      }
+    }
+
+    span {
+      display: block;
+      width: 23%;
+      height: 54px;
+      line-height: 54px;
+      float: left;
+      margin: 1%;
+      cursor: pointer;
+      border-radius: 4px;
+      &:hover,
+      &.focused {
+        background: $gray-200;
+      }
+      &.disabled,
+      &.disabled:hover {
+        background: none;
+        color: $gray-400;
+        cursor: default;
+      }
+      &.active,
+      &.active:hover,
+      &.active.disabled,
+      &.active.disabled:hover {
+        @include button-variant($blue, $blue);
+        box-shadow: none;
+
+        &:hover {
+          color: $white;
+          background-color: darken($blue, 4%);
+        }
+
+        &:focus,
+        &.focus {
+          color: $white;
+          background-color: darken($blue, 4%);
+        }
+
+        &.disabled,
+        &:disabled {
+          color: $white;
+          background-color: darken($blue, 10%);
+        }
+
+        &:not(:disabled):not(.disabled):active,
+        &:not(:disabled):not(.disabled).active {
+          color: $white;
+          background-color: $blue;
+        }
+      }
+      &.old,
+      &.new {
+        color: $gray-400;
+      }
+    }
+  }
+
+  .datepicker-switch {
+    width: 145px;
+  }
+
+  .datepicker-switch,
+  .prev,
+  .next,
+  tfoot tr th {
+    cursor: pointer;
+    &:hover {
+      background: $gray-200;
+    }
+  }
+
+  .prev,
+  .next {
+    &.disabled {
+      visibility: hidden;
+    }
+  }
+
+  .cw {
+    font-size: 10px;
+    width: 12px;
+    padding: 0 2px 0 5px;
+    vertical-align: middle;
+  }
+}
+
+.input-group.date .input-group-addon {
+  cursor: pointer;
+}
+
+.input-daterange {
+  width: 100%;
+  input {
+    text-align: center;
+  }
+  input:first-child {
+    border-radius: 3px 0 0 3px;
+  }
+  input:last-child {
+    border-radius: 0 3px 3px 0;
+  }
+  .input-group-addon {
+    width: auto;
+    min-width: 16px;
+    padding: 4px 5px;
+    line-height: $line-height-sm;
+    border-width: 1px 0;
+    margin-left: -5px;
+    margin-right: -5px;
+  }
+}

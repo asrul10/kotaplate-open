@@ -1,0 +1,127 @@
+.navbar {
+  background-color: $white;
+  height: $navbar-height;
+  border-bottom: 0.12rem solid lighten($gray-900, 45%);
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 1rem;
+  z-index: 3;
+
+  .navbar-block-content {
+    display: flex;
+    height: 2.1875rem;
+    vertical-align: middle;
+  }
+
+  .burger-menu {
+    padding: 0 0.5rem;
+    margin-right: 0.5rem;
+    display: flex;
+    height: 100%;
+    align-items: center;
+    svg.svg-inline--fa {
+      width: 1rem;
+      height: 1rem;
+      display: inline-block;
+    }
+  }
+
+  .navbar-brand {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    & > img {
+      margin-top: -1px;
+      height: 25px;
+    }
+  }
+
+  .searchbar {
+    margin-block-end: 0;
+    position: relative;
+    input {
+      width: 400px;
+      padding-right: 5.3rem;
+    }
+    .search-clear {
+      position: absolute;
+      right: 4.2rem;
+      top: 0.5rem;
+      opacity: .6;
+      color: $black;
+      &:hover {
+        color: $black !important;
+        opacity: .8;
+      }
+    }
+    .search-submit {
+      position: absolute;
+      right: 0.75rem;
+      border: solid 1px #bac3cf;
+      background-color: $gray-100;
+      border-radius: $border-radius;
+      padding: .1rem .3rem;
+      top: .4rem;
+      svg.svg-inline--fa {
+        width: 1rem;
+        height: 1rem;
+        display: inline-block;
+      }
+    }
+    .dropdown-menu {
+      width: 100%;
+      margin-top: 0.98rem;
+    }
+  }
+
+  a {
+    color: $black;
+    &:hover:not(.navbar-brand):not(.dropdown-item):not(.nav-link) {
+      color: $primary;
+    }
+  }
+}
+.navbar-nav {
+  flex-direction: inherit;
+  .image-menu {
+    margin-top: 1px;
+    max-width: 1rem;
+    max-height: 1rem;
+    &.profile {
+      height: 33px;
+      max-width: fit-content;
+      max-height: 33px;
+      border-radius: $border-radius;
+      margin-left: -0.5rem;
+    }
+  }
+  .dropdown-menu {
+    margin-top: 0.98rem;
+  }
+  .dropdown-toggle::after {
+    content: inherit;
+  }
+  .nav-item.show,
+  .nav-item:focus,
+  .nav-item:active,
+  .nav-item:hover {
+    background-color: $gray-200;
+    border-radius: $border-radius;
+  }
+  .nav-link {
+    text-align: center;
+    padding: 0;
+    display: flex;
+    height: 100%;
+    align-items: center;
+    color: $black;
+    &:hover {
+      color: $black;
+    }
+    svg.svg-inline--fa {
+      width: 1rem;
+      height: 1rem;
+      display: inline-block;
+    }
+  }
+}

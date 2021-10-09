@@ -1,0 +1,37 @@
+@each $color, $value in $theme-colors {
+  .badge-#{$color} {
+    color: $white;
+    @at-root a#{&} {
+      &:hover,
+      &:focus {
+        color: $white;
+      }
+    }
+  }
+}
+.badge-light {
+  color: $black;
+}
+
+.float-badge-container {
+  position: relative;
+  display: inline-block;
+}
+
+.float-badge {
+  color: $white;
+  line-height: 1.25rem;
+  height: 1.25rem;
+  background: $red;
+  padding: 0 5px;
+  font-size: 0.875rem;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translate(50%, -50%);
+  transform-origin: 100% 0;
+  white-space: nowrap;
+  text-align: center;
+  border-radius: 50%;
+}

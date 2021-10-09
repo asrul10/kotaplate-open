@@ -1,0 +1,15 @@
+.bg-placeholder {
+  animation: animateLoading 2.5s infinite linear;
+  background-color: $gray-400;
+  background-image: linear-gradient(90deg, $gray-400, $gray-200, $gray-400);
+  background-size: 300% 100%;
+}
+
+@keyframes animateLoading {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 300% 0;
+  }
+}

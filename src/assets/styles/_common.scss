@@ -1,0 +1,40 @@
+body {
+  overflow: hidden !important;
+  background-color: $background;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+// Wrapper
+.main {
+  overflow: hidden;
+
+  .page-wrapper {
+    max-height: calc(100vh - #{$navbar-height});
+    overflow: hidden;
+    width: 100%;
+    display: flex;
+
+    &::before {
+      content: "";
+      width: 100%;
+      height: 10px;
+      position: fixed;
+      margin-top: -11px;
+      box-shadow: $shadow-level-2;
+      z-index: 1;
+    }
+  }
+}
+
+// Anchor
+a {
+  font-weight: $font-weight-bold;
+  cursor: pointer;
+}
+
+// Line
+hr {
+  border-color: rgba($border-color, 1);
+}

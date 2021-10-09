@@ -1,0 +1,27 @@
+.breadcrumb {
+  padding-left: 0;
+  padding-right: 0;
+
+  .breadcrumb-item:not(:first-child) {
+    padding-left: 1rem;
+    margin-right: -.5rem;
+  }
+
+  .breadcrumb-item {
+    position: relative;
+    .breadcrumb-icon {
+      font-size: $font-size-base;
+      display: inline-block;
+      width: $font-size-base;
+      line-height: 1.5;
+      margin-right: 0.3rem;
+    }
+    .breadcrumb-arrow {
+      color: $breadcrumb-active-color;
+      font-size: 0.7rem;
+      margin-top: 0.5em;
+      position: absolute;
+      left: 0.3rem;
+    }
+  }
+}

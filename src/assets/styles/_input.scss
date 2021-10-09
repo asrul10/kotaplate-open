@@ -1,0 +1,48 @@
+.form-control-plaintext:focus {
+  outline: none;
+}
+
+// Toggle Password
+.input-password {
+  position: relative;
+
+  .field-icon {
+    position: absolute;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0.6;
+    &:hover {
+      opacity: 0.8;
+      cursor: pointer;
+    }
+  }
+}
+
+// Clear Input
+.input-clear {
+  position: relative;
+
+  .field-icon {
+    position: absolute;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0.6;
+    &:hover {
+      opacity: 0.8;
+      cursor: pointer;
+    }
+  }
+}
+
+
+// Text Area Auto Scale
+.auto-scale {
+  overflow: hidden;
+  resize: both;
+  height: auto;
+  resize: none;
+}
