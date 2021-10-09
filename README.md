@@ -1,12 +1,10 @@
 # Kotaplate
 Web app template based on [Create React App](https://github.com/facebook/create-react-app) and [Bootstrap 5](https://github.com/twbs/bootstrap)
-<br><br>
 
 # Usage
 - Install [pnpm](https://pnpm.io/installation)
 - ``$ pnpm start``\
 Runs the app in the development mode. Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-<br><br>
 
 # Todo
 - [x] Kotaplate style & layout
