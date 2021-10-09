@@ -1,3 +1,5 @@
+![Kotaplate Logo](https://github.com/asrul10/kotaplate-open/blob/main/src/assets/images/kotaplate-full-logo.png?raw=true)
+
 ## Kotaplate
 Web app template based on [Create React App](https://github.com/facebook/create-react-app) and [Bootstrap 5](https://github.com/twbs/bootstrap)
 
