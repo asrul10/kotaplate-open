@@ -68,6 +68,12 @@ const MenuItem = ({ menu, perfectScroll }) => {
   };
 
   useEffect(() => {
+    if (menu.active) {
+      setToggleDropdown(true);
+    }
+  }, [menu.active]);
+
+  useEffect(() => {
     perfectScroll && perfectScroll.update();
   }, [toggleDropdown, perfectScroll]);
 
