@@ -137,7 +137,9 @@ const SearchBar = ({ onSearch, searchlabel }) => {
   };
 
   const handleBlur = (e) => {
-    dropdownSearch.hide();
+    setTimeout(() => {
+      dropdownSearch.hide();
+    }, 100);
   };
 
   const clearSearch = () => {

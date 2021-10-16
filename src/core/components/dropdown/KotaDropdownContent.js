@@ -1,4 +1,5 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { Link } from "react-router-dom";
 
 const KotaDropdownContent = (props) => {
   const { items } = props;
@@ -11,7 +12,8 @@ const KotaDropdownContent = (props) => {
             <button
               className="dropdown-item btn btn-anchor text-dark"
               key={index}
-              onClick={item.onClick}>
+              onClick={item.onClick}
+            >
               {item.icon && (
                 <FontAwesomeIcon
                   icon={item.icon}
@@ -20,6 +22,19 @@ const KotaDropdownContent = (props) => {
               )}
               {item.label}
             </button>
+          );
+        }
+        if (!item.externalLink) {
+          return (
+            <Link className="dropdown-item" to={item.href} key={index}>
+              {item.icon && (
+                <FontAwesomeIcon
+                  icon={item.icon}
+                  className={item.label ? "fas me-1" : "fas"}
+                />
+              )}
+              {item.label}
+            </Link>
           );
         }
         return (
