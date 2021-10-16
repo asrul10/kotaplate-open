@@ -28,7 +28,6 @@ const BootstrapComponent = ({ data }) => {
   const docs = data.link;
   const content = data.content;
   const splitContent = () => {
-    console.log(content.length);
     if (content.length === 3) {
       return 1;
     }
