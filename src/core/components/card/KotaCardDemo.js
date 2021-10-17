@@ -37,7 +37,8 @@ const KotaExampleCode = ({ children, className, ...props }) => {
         <button
           onClick={() => setToggleCode(!toggleCode)}
           type="button"
-          className="btn btn-anchor p-0 mb-0 mt-2">
+          className="btn btn-anchor p-0 mb-0 mt-2"
+        >
           <FontAwesomeIcon icon={faCode} /> {toggleCode ? "Hide" : "Show"} code
         </button>
       </div>

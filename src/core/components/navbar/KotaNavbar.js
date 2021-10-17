@@ -49,14 +49,16 @@ const MenuItem = ({ item }) => {
           <button
             ref={menuElement}
             className={`nav-link btn btn-anchor ${classNameColor}`}
-            onClick={item.onClick}>
+            onClick={item.onClick}
+          >
             <FormatLabel item={item} />
           </button>
         ) : (
           <a
             ref={menuElement}
             href={item.href}
-            className={`nav-link ${classNameColor}`}>
+            className={`nav-link ${classNameColor}`}
+          >
             <FormatLabel item={item} />
           </a>
         )}
@@ -108,8 +110,8 @@ const SearchBar = ({ onSearch, searchlabel }) => {
     setSearchValue(value);
 
     const callbackSearch = onSearch(e);
-    if (typeof callbackSearch?.then === 'function') {
-      callbackSearch.then(resp => {
+    if (typeof callbackSearch?.then === "function") {
+      callbackSearch.then((resp) => {
         if (!resp.length) {
           dropdownSearch.hide();
           setSearchResult([]);
@@ -168,7 +170,8 @@ const SearchBar = ({ onSearch, searchlabel }) => {
           <button
             type="button"
             className="btn p-0 shadow-none search-clear"
-            onClick={clearSearch}>
+            onClick={clearSearch}
+          >
             <FontAwesomeIcon icon={faTimesCircle} />
           </button>
         )}
@@ -197,7 +200,8 @@ const KotaNavbar = ({ title, srcLogo, menuItems, onSearch, searchlabel }) => {
         <button
           type="button"
           className="btn btn-anchor text-dark burger-menu"
-          onClick={toggleSidebar}>
+          onClick={toggleSidebar}
+        >
           <FontAwesomeIcon icon={faBars} />
         </button>
         <a className="navbar-brand" href="/">

@@ -23,9 +23,7 @@ const NavItem = ({ nav }) => {
   return (
     <li className="breadcrumb-item">
       <FontAwesomeIcon icon={loadIcon} className="breadcrumb-arrow" />{" "}
-      <a href={nav.href}>
-        {nav.label}
-      </a>
+      <a href={nav.href}>{nav.label}</a>
     </li>
   );
 };

@@ -47,11 +47,11 @@
       position: absolute;
       right: 4.2rem;
       top: 0.5rem;
-      opacity: .6;
+      opacity: 0.6;
       color: $black;
       &:hover {
         color: $black !important;
-        opacity: .8;
+        opacity: 0.8;
       }
     }
     .search-submit {
@@ -60,8 +60,8 @@
       border: solid 1px #bac3cf;
       background-color: $gray-100;
       border-radius: $border-radius;
-      padding: .1rem .3rem;
-      top: .4rem;
+      padding: 0.1rem 0.3rem;
+      top: 0.4rem;
       svg.svg-inline--fa {
         width: 1rem;
         height: 1rem;

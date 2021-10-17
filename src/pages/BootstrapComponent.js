@@ -44,7 +44,8 @@ const BootstrapComponent = ({ data }) => {
           href={docs}
           className="btn btn-secondary btn-sm"
           target="_blank"
-          rel="noreferrer">
+          rel="noreferrer"
+        >
           <FontAwesomeIcon icon={faBook} /> Documentation
         </a>
       </div>

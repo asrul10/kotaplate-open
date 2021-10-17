@@ -110,7 +110,7 @@ const filterMenu = (menus) => {
     if (menu.href) {
       newList.push({
         href: menu.href,
-        label: menu.label
+        label: menu.label,
       });
     }
     if (menu.child) {

@@ -59,12 +59,14 @@ const KotaDropdownNotification = (props) => {
   return (
     <div
       className="dropdown-menu dropdown-menu-end"
-      aria-labelledby="notification">
+      aria-labelledby="notification"
+    >
       <div className="header-notifications align-items-center">
         <strong>{header}</strong>
         <button
           className="btn btn-anchor p-0 text-dark fw-normal"
-          onClick={clearAllCallback}>
+          onClick={clearAllCallback}
+        >
           Clear all
         </button>
       </div>

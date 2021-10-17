@@ -5,10 +5,11 @@ const KotaDropdown = (props) => {
     <div className={`dropdown ${className || ""}`}>
       <button
         type="button"
-        className={`dropdown-toggle ${btnClassName || ''}`}
+        className={`dropdown-toggle ${btnClassName || ""}`}
         data-bs-toggle="dropdown"
         aria-haspopup="true"
-        aria-expanded="true">
+        aria-expanded="true"
+      >
         {label}
       </button>
       {dropdownContent}

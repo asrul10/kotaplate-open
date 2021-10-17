@@ -1,7 +1,7 @@
 const mapAttribute = (props, key) => {
   let propValue = props[key];
   let value = "";
-  let attrString = '';
+  let attrString = "";
 
   if (propValue instanceof Object) {
     value = `{${JSON.stringify(propValue).replace(/['"]+/g, "")}}`;
@@ -18,7 +18,7 @@ const mapAttribute = (props, key) => {
     attrString = ` ${key}`;
   }
   return attrString;
-}
+};
 
 const jsxString = (component, counter = 0) => {
   if (typeof component === "string") {

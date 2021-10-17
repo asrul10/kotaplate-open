@@ -95,7 +95,8 @@ const MenuItem = ({ menu, perfectScroll }) => {
         <button
           type="button"
           className="btn btn-anchor"
-          onClick={() => setToggleDropdown(!toggleDropdown)}>
+          onClick={() => setToggleDropdown(!toggleDropdown)}
+        >
           <FontAwesomeIcon icon={loadIcon} className="fas" />
           {menu.label} {badge}
           <FontAwesomeIcon

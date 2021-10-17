@@ -60,7 +60,7 @@ const formatSingleEle = (str) => {
     let element = "<" + splitStr[index];
     let tagName = element.match(/<[a-zA-Z]+ /g);
     if (element.match(/br|hr/gm)) {
-      splitStr[index+1] = "";
+      splitStr[index + 1] = "";
     }
     if (tagName) {
       tagName = tagName[0].replace(/[<\s]/g, "");

@@ -12,7 +12,7 @@ const KotaContent = ({ children }) => {
       perfectScroll.update();
     }
   }, [perfectScroll]);
-  const { ref  } = useResizeDetector({ onResize });
+  const { ref } = useResizeDetector({ onResize });
 
   useEffect(() => {
     setPerfectScroll(
@@ -23,12 +23,14 @@ const KotaContent = ({ children }) => {
   }, [contentWrapper]);
 
   useEffect(() => {
-      contentWrapper.current.scrollTop = 0;
+    contentWrapper.current.scrollTop = 0;
   }, [location]);
 
   return (
     <div ref={contentWrapper} className="content-wrapper">
-      <div ref={ref} className="main-content">{children}</div>
+      <div ref={ref} className="main-content">
+        {children}
+      </div>
     </div>
   );
 };
