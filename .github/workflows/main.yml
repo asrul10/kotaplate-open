@@ -12,12 +12,11 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
         with:
-          fetch-depth: 0
           ref: ${{ github.head_ref }}
-          persist-credentials: false
+          fetch-depth: 0
 
       - name: Prettify code
         uses: creyD/prettier_action@v4.0
         with:
-          dry: True
-          github_token: ${{ secrets.PERSONAL_TOKEN }}
+          prettier_options: --write **/*.{js,md,scss}
+          only_changed: True
