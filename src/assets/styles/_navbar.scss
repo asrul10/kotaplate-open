@@ -7,6 +7,10 @@
   padding: 0.5rem 1rem;
   z-index: $zindex-modal;
 
+  @include media-breakpoint-down(lg) {
+    padding: 0.25rem 0.5rem;
+  }
+
   .navbar-block-content {
     display: flex;
     height: 2.1875rem;

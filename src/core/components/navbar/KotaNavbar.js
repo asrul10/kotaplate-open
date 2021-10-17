@@ -1,10 +1,16 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Dropdown, Tooltip } from "bootstrap";
 import { useEffect, useRef, useState } from "react";
-import { faBars, faTimesCircle } from "@fortawesome/free-solid-svg-icons";
+import {
+  faBars,
+  faTimesCircle,
+  faUser,
+} from "@fortawesome/free-solid-svg-icons";
 import KotaDropdown from "../dropdown/KotaDropdown";
 import KotaDropdownContent from "../dropdown/KotaDropdownContent";
 import { useHotkeys } from "react-hotkeys-hook";
+import KotaDesktop from "../responsive/KotaDesktop";
+import KotaMobile from "../responsive/KotaMobile";
 
 const FormatLabel = ({ item }) => {
   return (
@@ -208,13 +214,57 @@ const KotaNavbar = ({ title, srcLogo, menuItems, onSearch, searchlabel }) => {
           <img src={srcLogo} alt={title} />
         </a>
       </div>
-      {onSearch && <SearchBar onSearch={onSearch} searchlabel={searchlabel} />}
+      {onSearch && (
+        <KotaDesktop>
+          <SearchBar onSearch={onSearch} searchlabel={searchlabel} />
+        </KotaDesktop>
+      )}
       <div className="navbar-block-content">
-        <div className="navbar-nav">
-          {menuItems.map((item, index) => (
-            <MenuItem item={item} key={index} />
-          ))}
-        </div>
+        <KotaDesktop>
+          <div className="navbar-nav">
+            {menuItems.map((item, index) => (
+              <MenuItem item={item} key={index} />
+            ))}
+          </div>
+        </KotaDesktop>
+        <KotaMobile>
+          <button
+            type="button"
+            className="btn btn-anchor text-dark"
+            data-bs-toggle="modal"
+            data-bs-target="#mobileNav"
+          >
+            <FontAwesomeIcon icon={faUser} />
+          </button>
+
+          <div
+            className="modal fade"
+            id="mobileNav"
+            tabIndex="-1"
+            aria-labelledby="mobileNavLabel"
+            aria-hidden="true"
+          >
+            <div className="modal-dialog modal-fullscreen-sm-down">
+              <div className="modal-content">
+                <div className="modal-body">
+                  <div className="d-flex">
+                    <div className="navbar-nav flex-column gap-3 flex-grow-1">
+                      {menuItems.map((item, index) => (
+                        <MenuItem item={item} key={index} />
+                      ))}
+                    </div>
+                    <button
+                      type="button"
+                      className="btn-close ps-2 pe-2"
+                      data-bs-dismiss="modal"
+                      aria-label="Close"
+                    ></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </KotaMobile>
       </div>
     </header>
   );
