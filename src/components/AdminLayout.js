@@ -1,11 +1,10 @@
-
 import KotaFooter from "../core/components/footer/KotaFooter";
 import Sidebar from "./Sidebar";
 import Navbar from "./Navbar";
-import { useCallback, useEffect, useRef, useState } from 'react';
+import { useCallback, useEffect, useRef, useState } from "react";
 import { useLocation } from "react-router-dom";
 import { useResizeDetector } from "react-resize-detector";
-import PerfectScrollbar from 'perfect-scrollbar';
+import PerfectScrollbar from "perfect-scrollbar";
 
 const AdminLayout = ({ children }) => {
   const [perfectScroll, setPerfectScroll] = useState(null);
